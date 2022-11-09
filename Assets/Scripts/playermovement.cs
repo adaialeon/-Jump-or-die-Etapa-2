@@ -109,6 +109,7 @@ public class playermovement : MonoBehaviour
         if(other.gameObject.layer == 3)
         {
             //gamemanager.Instance.RestarVidas();
+            StartCoroutine(GameObject.Find("Main Camera").GetComponent<camerashake>().Shake());
         }
     } 
 

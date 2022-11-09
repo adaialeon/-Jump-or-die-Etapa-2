@@ -18,7 +18,7 @@ public class camerashake : MonoBehaviour
    
    
    //Coroutine = es una funcion pero podemos pararla y que se ejecute en el siguiente frame
-    IEnumerator Shake()
+    public IEnumerator Shake()
     {
         //yield return 0;
         //para que se ejecute en los segundos que yo decida, en este caso 1 segundo
