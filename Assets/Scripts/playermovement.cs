@@ -106,6 +106,13 @@ public class playermovement : MonoBehaviour
         {
             director.Play();
         }
-    }   
-}
+        if(other.gameObject.layer == 3)
+        {
+            //gamemanager.Instance.RestarVidas();
+        }
+    } 
+
+}   
+
+  
 

@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class camerafollow : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+{   
+
+    //almacenamos a la Elfa
+    public Transform target;
 
     // Update is called once per frame
     void Update()
     {
-        
+        //posición cámara = posición personaje
+       transform.position = new Vector3(target.position.x, target.position.y, transform.position.z); 
     }
 }
