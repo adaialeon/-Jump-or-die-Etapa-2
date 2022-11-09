@@ -18,7 +18,7 @@ public class camerashake : MonoBehaviour
    
    
    //Coroutine = es una funcion pero podemos pararla y que se ejecute en el siguiente frame
-    public IEnumerator Shake()
+    public IEnumerator Shake(float duration, float magnitude)
     {
         //yield return 0;
         //para que se ejecute en los segundos que yo decida, en este caso 1 segundo
@@ -31,7 +31,7 @@ public class camerashake : MonoBehaviour
 
         //Crear un loop
         //Si la condicion no se cumple no ejecuta el código
-        /*while(elapsed < duration)
+        while(elapsed < duration)
         {
            
             float x = Random.Range(-1f, 1f) * magnitude;
@@ -41,7 +41,7 @@ public class camerashake : MonoBehaviour
             elapsed  += Time.deltaTime;
             yield return 0;
 
-        }*/
+        }
 
         //Movimiento trambolico de la cámara
         /*for(float i = elapsed; i < duration; i += Time.deltaTime)
@@ -56,7 +56,7 @@ public class camerashake : MonoBehaviour
         }*/
     
      //Si la condicion solo se ejecuta una vez
-     do
+     /*do
      {
         Debug.Log("Shake");
         float x = Random.Range(-1f, 1f) * magnitude;
