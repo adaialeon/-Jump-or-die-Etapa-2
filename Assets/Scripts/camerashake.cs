@@ -30,15 +30,52 @@ public class camerashake : MonoBehaviour
         float elapsed = 0f;
 
         //Crear un loop
-        while(elapsed < duration)
+        //Si la condicion no se cumple no ejecuta el código
+        /*while(elapsed < duration)
         {
+           
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
             transform.position = new Vector3(x + originalPos.x, + originalPos.y, transform.position.z);
             elapsed  += Time.deltaTime;
             yield return 0;
-        }
+
+        }*/
+
+        //Movimiento trambolico de la cámara
+        /*for(float i = elapsed; i < duration; i += Time.deltaTime)
+      {
+
+        float x = Random.Range(-1f, 1f) * magnitude;
+        float y = Random.Range(-1f, 1f) * magnitude;
+
+        transform.position = new Vector3(x + originalPos.x, y + originalPos.y, transform.position.z);
+        yield return 0;   
+
+        }*/
+    
+     //Si la condicion solo se ejecuta una vez
+     do
+     {
+        Debug.Log("Shake");
+        float x = Random.Range(-1f, 1f) * magnitude;
+        float y = Random.Range(-1f, 1f) * magnitude;
+
+        transform.position = new Vector3(x + originalPos.x, y + originalPos.y, transform.position.z);
+        elapsed  += Time.deltaTime;
+        yield return 0; 
+
+     } while (elapsed < duration);
+
+        /*GameObject[] vidas;
+
+     //Vidas del personaje bucle para recorrer una lista
+     foreach(GameObject vida in vidas)
+     {
+        vida.SetActive(false);
+        }*/
+
     }
 
 }

@@ -110,6 +110,7 @@ public class playermovement : MonoBehaviour
         {
             //gamemanager.Instance.RestarVidas();
             StartCoroutine(GameObject.Find("Main Camera").GetComponent<camerashake>().Shake());
+            Destroy(other.gameObject);
         }
     } 
 
